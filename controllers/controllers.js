@@ -43,7 +43,7 @@ const loginPOST = async (req, res) => {
       return;
     } else if (Found.password === password) {
       Found.last_login = new Date();
-      await Found.save(); // saves  the new lastlogin
+      await Found.save(); // saves  the new date in lastlogin
 
       res.render('loggedIn', {
         accNAME: Found.username,
